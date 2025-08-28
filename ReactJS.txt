@@ -1,0 +1,170 @@
+Class 1
+  Syllabus Discussion
+Class 2
+  Course Overview
+Class 3
+  Client App  => Server  App  => Data Base
+  React       => Node js      => Mongo DB
+
+  Mark up language is directly run no need to compile.
+  Developer Console Window: Unique for particular tab
+  Elements + Console + Sources
+Class 4
+  Tags/Elements
+  -Inline : The elements that takes content width as its own width.
+    span, i, a,
+  -Block : The elements that takes the parent width as its own width.
+    div, p, h3 ...
+Class 5
+  Elements behaviour is completely depend on styles applied to that element.
+Class 6
+  
+Class 7
+
+Class 8
+
+Class 9
+
+Class 10
+
+Class 11
+
+Class 12
+
+Class 13
+
+Class 14
+
+Class 15
+
+Class 16
+
+Class 17
+
+Class 18
+
+Class 19
+
+Class 20
+
+Class 21
+
+Class 22
+
+Class 23
+
+Class 24
+
+Class 25
+
+Class 26
+
+Class 27
+
+Class 28
+
+Class 29
+
+Class 30
+
+Class 31
+
+Class 32
+
+Class 33
+
+Class 34
+
+Class 35
+
+Class 36
+
+Class 37
+
+Class 38
+
+Class 39
+
+Class 40
+
+Class 41
+
+Class 42
+
+Class 43
+
+Class 44
+
+Class 45
+
+Class 46
+
+Class 47
+
+Class 48
+
+Class 49
+
+Class 50
+
+Class 51
+
+Class 52
+
+Class 53
+
+Class 54
+
+Class 55
+
+Class 56
+
+Class 57
+
+Class 58
+
+Class 59
+
+Class 60
+
+Class 61
+
+Class 62
+
+Class 63
+
+Class 64
+
+Class 65
+
+Class 66
+
+Class 67
+
+Class 68
+
+Class 69
+
+Class 70
+
+Class 71
+
+Class 72
+
+Class 73
+
+Class 74
+
+Class 75
+
+Class 76
+
+Class 77
+
+Class 78
+
+Class 79
+
+Class 80
+
+Class 81

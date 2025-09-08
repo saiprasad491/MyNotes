@@ -18,63 +18,1762 @@ Class 4
 Class 5
   Elements behaviour is completely depend on styles applied to that element.
 Class 6
-  
+  Request and response are get registered in network tab.
+  We can see the request in file explorer format in source tab.
 Class 7
-
+  localStorage.setItem("name","Kunal");
+  undefined 
 Class 8
-
+  CSS Begins...
+  3 ways of adding styles:
+  1. Inline : By using style attribute
+    i. written duplicate code
+    ii.Making the changes very costly
+  2. Internal : By using style tag
+    selector{
+      key:value;
+      key:value;
+      key:value;...
+    }
+    i. Written the duplicate code at page level
+    ii. Making the changs very costly
+  3. External
+    <link rel="stylesheet" href= "styles.css"></link>
+  Priority Order:
+  inline > Internal > External
+  h1{
+    color:red !important first Priority
+  }
 Class 9
+  Box Model
+  padding-top: 100;
+  padding-bottom: 100;
+  padding-left: 100;
+  padding-right: 100;
+  padding:top right bottom left;  //short hand
 
+  Types of selectors:-
+  1. Tag Name Selector  Ex: div,h1,p{}
+  2. Class Selector  Ex: .class_name{}
+  3. Id Selector  Ex: #id_name{}
+  4. :first-child Selector  Ex: div:first-child{}
+  5. :last-child Selector  Ex: div:last-child{}
+  6. :first-of-type Selector Ex: div:first-of-type{}
+  7. :last-of-type Selector Ex: div:last-of-type{}
 Class 10
+  8. Direct child selector Ex: body>div{}
+  9. All child selector Ex: body div{}
+  10. Sibling selector Ex: p+span{}
+  11. Next Sibling selector Ex: p~span{}
+  12. :nth-child(5) selector Ex: p:nth-child(3){}
+  13. Attribut selector Ex: input[type=password]{},input:not([type=password]){}
+  Positions:-
+  1.static
+    i.It is the default position
+    ii.top, right, left, bottom is not applicable
+  2.absolute
+    i. We can apply top, right, left, bottom
+    ii.Behaviour changed (it takes only content width)
+    iii. remove the space from the DOM
+    iv. It takes parent as a reference, if the parent has other than static position
+    
+  3.relative
+    i. We can apply top, right, left, bottom
+    ii. behaviour not changed
+    iii. Not removed the space from DOM
+    iv. It takes the current position as a reference
+
+  4.fixed
+    i. We can apply top, right, left, bottom
+    ii.Behaviour changed (it takes only content width)
+    iii. remove the space from the DOM
+    iv. It takes html/ view port / windows as a reference
+
+  5.sticky
+    i. We can apply top, right, left, bottom
+    ii. behaviour not changed
+    iii. Not remove the space from DOM
+    iv. ?
 
 Class 11
-
+  Positions continues
+  Media Queries
+  Responsive means horizontal scroll should not be there.
 Class 12
+  <style>
+  div{
+    height:50px;
+  }
+  #red{
+    border:2px solid red;
+  }
+  #blue{
+    border:2px solid blue;
+  }
+  #green{
+    border:2px solid green;
+  }
+  @media screen and (max-width:700px){
+    
+  }
+  @media screen and (min-width:701px) and (max-width:900px){
+    #red,#blue{
+      width:49%;
+      display:inline-block;
 
+    }
+  }
+  @media screen and (min-width:901px) and (max-width:1200px) {
+    #blue,#green{
+      width:48%;
+      display:inline-block;
+
+    }
+  }
+  @media screen and (min-width:1201px){
+    #red,#blue,#green{
+      width:32%;
+      display:inline-block;
+    }
+  }
+  </style>
+
+  <div id = 'red'>
+    <span>Sai</span>
+  </div>
+  <div id="blue" >
+    <span>Kunal</span>
+  </div>
+  <div id="green" >
+    <span>Situ</span>
+  </div>
 Class 13
-
+  We can create responsive web page by using bootstrap also.  
 Class 14
+  My First Static Web page
+  <link rel="stylesheet" href="../Bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="../Bootstrap/styles.css" />
+  <script src="../Bootstrap/bootstrap.js" ></script>
 
-Class 15
 
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 p-5 m-0 h1 text-center bg-primary text-white">
+        My First Static WebPage
+      </div>
+    </div>
+
+    <div class="row position-sticky top-0">
+      <div class="col-12 bg-info text-success text-end menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <div class="row ">
+      <div class="col-3 bg-danger-subtle content">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseOne"
+                aria-expanded="false"
+                aria-controls="flush-collapseOne"
+              >
+                Accordion Item #1
+              </button>
+            </h2>
+            <div
+              id="flush-collapseOne"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingOne"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                first item's accordion body.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo"
+              >
+                Accordion Item #2
+              </button>
+            </h2>
+            <div
+              id="flush-collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingTwo"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                second item's accordion body. Let's imagine this being filled with
+                some actual content.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree"
+              >
+                Accordion Item #3
+              </button>
+            </h2>
+            <div
+              id="flush-collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="flush-headingThree"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                third item's accordion body. Nothing more exciting happening here
+                in terms of content, but just filling up the space to make it
+                look, at least at first glance, a bit more representative of how
+                this would look in a real-world application.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-8 bg-info-subtle">2</div>
+      <div class="col-1 bg-warning-subtle">3</div>
+    </div>
+
+    <div class="row">
+      <div
+        class="col-12 d-block text-center bg-primary text-white position-fixed bottom-0"
+      >
+        &copy; rights belongs to me.
+      </div>
+    </div>
+  </div>
+Class 15  JS Started
+  Variables are used to store data.
+  JS is dynamically typed programming language i.e memory is dynamically allocated to a variable.
+  Datatypes:
+  var
+  let
+  const
+  name = 'Sai'
+  'Sai'
+  name
+  'Sai'
+  name = "Saiprasad"
+  'Saiprasad'
+  name
+  'Saiprasad'
+  isPass = true
+  true
+  players=['Sai','Kunal','Situ']
+  (3) ['Sai', 'Kunal', 'Situ']
+  players
+  (3) ['Sai', 'Kunal', 'Situ']
+  student={
+      name:'Sai',
+      rollno:417051
+  }
+  {name: 'Sai', rollno: 417051}
+  student
+  {name: 'Sai', rollno: 417051}
+  //The default value for variable in JS is undefined.
+  undefined
 Class 16
-
+  1.loc
+  VM679:1 Uncaught ReferenceError: loc is not defined
+      at <anonymous>:1:1
+  (anonymous) @ VM679:1Understand this error
+  loc = 'mumbai'
+  'mumbai'
+  loc
+  'mumbai'
+  2.loc
+  VM801:1 Uncaught ReferenceError: loc is not defined
+      at <anonymous>:1:1
+  (anonymous) @ VM801:1Understand this error
+  var loc;
+  undefined
+  loc
+  undefined
+  3.loc
+  VM898:1 Uncaught ReferenceError: loc is not defined
+      at <anonymous>:1:1
+  (anonymous) @ VM898:1Understand this error
+  var loc = 'mumbai'
+  undefined
+  loc
+  'mumbai'
+  function f1(a,b){
+    console.log(a);
+    console.log(b);
+  }
+  f1();       //valid
+  f1(a);      //valid
+  f1(a,b);    //valid
+  f1(a,b,c);  //valid
+  undefined+undefined
+  NaN
+  10+undefined
+  NaN
+  true+undefined
+  NaN
+  true+10
+  11
+  null+true
+  1
+  true
+  true
+  Ex.
+  function clrChange(a,b){
+    document.querySelector('#gb > div.gb_rd.gb_vd.gb_Kd.gb_sd.gb_Oc > div.gb_Fd.gb_2d.gb_Ad > div:nth-child(1) > div > div:nth-child(1) > a').style.color=a;
+    document.querySelector('#gb > div.gb_rd.gb_vd.gb_Kd.gb_sd.gb_Oc > div.gb_Fd.gb_2d.gb_Ad > div:nth-child(1) > div > div:nth-child(1) > a').style.size=b;
+  }
+  clrChange('red',400);
+  function f1(a){
+    a();
+  }
+  undefined
+  f1(10)
+  VM591:2 Uncaught TypeError: a is not a function
+      at f1 (<anonymous>:2:5)
+      at <anonymous>:1:1
+  f1 @ VM591:2
+  (anonymous) @ VM613:1Understand this error 
+  function f1(a){
+    a();
+  }
+  undefined
+  function f2(){
+      console.log("Function f2");
+  }
+  undefined
+  f1(f2);
+  Function f2
+  undefined
+  f2 ==> call back function ==> which function is passed as an argument to another function
+  f1 ==> Higher order function
 Class 17
+  The function without having any name is called an anonymous function.
+  (function(){
+    console.log('called');
+  })()
+  called
+  var a = function(){
+    console.log('called');
+  }
+  undefined
+  a();
+  called
+  undefined
+  function f1(a){
+      a();
+  }
+  f1(
+    function(){
+        console.log('anonymous function called');
+    })
+  anonymous function called
+  undefined
+  alert()
+  undefined
+  alert('sai')
+  undefined
 
+  f1(function(name){
+    console.log(name);
+  },
+  function(){
+      console.log('Dhoni');
+  })()
+  sachin
+  Dhoni
+  undefined
+
+  Rendering content through JS
+  <div id="root"></div>
+  <script>
+    //prepare content
+    var content = "Hello World";
+
+    //render content inside the container
+    var root = document.querySelector('#root');
+    root.innerText=content;
+
+  </script>
+  2 types of components --> 
+  1. class component 
+  2. functional component
 Class 18
+  function App(){
 
+  }
+  App() ---> function
+  new App() ---> class
+  <App/> or <App></App> ---> component
+  i. Should be in the element format
+  ii. Start letter must be capital
+  iii. react library is required in order to understand a component by browser
+  JSX ---> JavaScript and XML
+  code which we used to prepare the content inside the component
+  JSX code is going to compile
+
+  Rendering content through React
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
+  <!-- Container -->
+  <div id="root"></div>
+
+  <script type="text/babel" >
+    // prepare content
+    function App(){
+      return <h1>Hello world</h1>
+    }
+    //container ref
+    var root = ReactDOM.createRoot(document.querySelector('#root'));
+    //render content inside the container
+    root.render(<App/>);
+  </script>
 Class 19
-
+  to align center of a div
+  text-align: center;
+  line-height: 100px;
 Class 20
+  Object
+  player={}
+  {}
+  insert:
+  player.name='Sachin'
+  'Sachin'
+  player['runs']=2000
+  2000
+  update: 
+  same like insert
+  player.name = 'Dhoni'
+  Delete:
+  delete player.runs
+  delete player['full name']
+  Get:
+  Obj.property
+  obj['property']
+  Object.keys(player)
+  (2) ['name', 'runs']
 
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
+
+  <div id="root"></div>
+
+  <script type="text/babel" >
+    function Name(props){
+      return <h1>My name is {props.name}, am from {props.city} and runs are {props.children}.</h1>;
+    }
+    function App(){
+      return <>
+      <Name name='Sachin' city='Mumbai' >20000</Name>
+      <Name name='Dhoni' city='Ranchi' >10000</Name>
+      <Name name='Kohli' city='Delhi' >9000</Name>
+      </>;
+    }
+    var root=ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App/>);
+  </script>
 Class 21
+  this
+  window is the super object.
+  function fn(x,y){
+    console.log(x+y+this.no);
+  }
+  undefined
+  fn(10,20)
+  VM207:2 NaN
+  undefined
+  this.no=30;
+  30
+  fn(10,20);
+  VM207:2 60
+  undefined
+  function fn(){
+    console.log('fn called');
+  }
+  undefined
+  fn();
+  VM285:2 fn called
+  undefined
+  fn.call();
+  VM285:2 fn called
+  undefined
+  fn.apply();
+  VM285:2 fn called
+  undefined
+  fn.bind();
+  ƒ fn(){
+      console.log('fn called');
+    }
+  fn.bind()();
+  VM285:2 fn called
+  undefined
+  Using call,apply,bind methods we can call a function, by making your own object available like current object(this).
+  function                      Equivalent arrow function
+  function fn(){                 var fn = ()=>{
 
+  }                               }
+  function(){//anonymous function ()=>{
+
+  }                               }
+  function fn(){                 var fn = ()=>console.log
+    console.log('fn');            ('fn');
+  }                               
+  function fn(){                 var fn = ()=>10;
+    return 10;
+  }                               
+  Example of call, apply, and bind methods
+  function fn(x,y){
+    console.log(x+y+this.no);
+  }
+  undefined
+  fn.call({no:20},10,30);
+  60
+  undefined
+  fn.apply({no:20},[10,30]);
+  60
+  undefined
+  fn.bind({no:20},10,30)();
+  60
+  undefined
 Class 22
-
+  function f1(a){
+    function f2(b){
+        console.log(a+b);
+    }
+    f2(10);
+  }
+  undefined
+  f1(100);
+  110
+  normal function scope can change
+  function f1(){
+    console.log(this);
+  }
+  undefined
+  f1.call({x:100})
+  VM1126:2 {x: 100}
+  undefined
+  arrow function scope, we are not able to change
+  f1=()=>{
+    console.log(this);
+  }
+  ()=>{
+      console.log(this);
+  }
+  f1.call({x:100});
+  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+  undefined
+  By default arrow functions having lexical scope behaviour, it owns the parent scope.
+  if we want to change the current context of arrow functions, we should have to change the parent current scope.
+  let block level scope.
+  var functional scope.
+  const same as let but behaviour can't change.
+  const Name=(props)=>{
+    return <h1>My name is {props.name}, am from {props.city} and runs are {props.children}.</h1>;
+  }
+  Rest parameters-------->
+  function f1(...no){
+    console.log(no);
+  }
+  undefined
+  f1(10,20,30,40);
+  (4) [10, 20, 30, 40]
+  function f1(...no){ //sum of multiple elements
+    let sum=0;
+    for(let i=0;i<no.length;i++){
+        sum += no[i];
+    }
+    console.log(sum);
+  }
+  undefined
+  f1(10);
+  10
+  undefined
+  f1(10,20,30);
+  60
+  undefined
+  Rest parameter must be last formal parameter.
+  function f1(...no,x,y) {  //invalid
+      
+  }
+  function f1(x,y,...no) {  //valid
+    
+  }
+  Object Destructuring ------->
+  const obj={
+    add:{
+        loc:'Bhuban',
+        pin:759017
+    }
+  }
+  undefined
+  const {loc,pin}=obj.add
+  undefined
+  loc
+  'Bhuban'
+  pin
+  759017
+  Ex. const {n,l,r} = props
 Class 23
-
+  Array Destructuring ------->
+  var srr = [10,20,30]
+  undefined
+  const [x,y,z]=srr
+  undefined
+  x
+  10
+  y
+  20
+  z
+  30
+  Spread Operator ------->
+  var obj1={
+    n1:10,
+    n2:20
+  }
+  undefined
+  var obj2={
+      n3:30,
+      n4:40
+  }
+  undefined
+  var obj={
+      ...obj1,
+      ...obj2,
+      n3:3000
+  }
+  undefined
+  obj
+  {n1: 10, n2: 20, n3: 3000, n4: 40}
+  var ar1 = [100,200]
+  undefined
+  var ar2 = [300,200]
+  undefined
+  var arr = [...ar1,...ar2]
+  undefined
+  arr
+  (4) [100, 200, 300, 200]
+  Short Hand key ------->
+  var n1 = 10
+  undefined
+  var n2 = 20
+  undefined
+  var obj = {
+      n1:n1,
+      n2:n2
+  }
+  undefined
+  obj
+  {n1: 10, n2: 20}
+  var obj2 = {n1,n2}
+  undefined
+  obj2
+  {n1: 10, n2: 20}
+  React.dev is the official website
+  Window is the super object
+  document represents the content which is loaded inside the browser in JS.
 Class 24
+  useRef React Hook --->
+  Event handler is always a function.
+  <input onChange={fnChange} />
+  string to number ---> parseInt
+  Assignment--->
+  1. Not a prime/prime
+  2. abc reverse
+  3. sum sub mul div mod
 
-Class 25
+  Example sum of two numbers
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
 
+  <div id="root"></div>
+
+  <script type="text/babel">
+    // content
+
+    const Template = () => {
+      const ref1 = React.useRef();
+      const ref2 = React.useRef();
+      const ref = React.useRef();
+      const fnClick = () => {
+        const n1 = ref1.current.value;
+        const n2 = ref2.current.value;
+        let sum = parseInt(n1) + parseInt(n2);
+        console.log(sum);
+        ref.current.innerHTML="<b>"+sum+"</b>";
+        if(sum<100){
+          ref.current.style.color='green';
+        }else{        
+          ref.current.style.color='red';
+        }
+      };
+      
+      return (
+        <div>
+          <p>
+            Number1 : <input ref={ref1} />
+          </p>
+          <p>
+            Number2 : <input ref={ref2} />
+          </p>
+          <p>
+            <button onClick={fnClick}>Sum</button>
+          </p>
+          <p>
+            <span>Result : </span> <span ref={ref} >0</span>
+          </p>
+        </div>
+      );
+    };
+    const App = () => {
+      return (
+        <div>
+          <Template />
+        </div>
+      );
+    };
+    //container reference
+    var root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+Class 25  useState  hook
+  function fn(init){
+    let no=init;
+    const noChange=(newValue)=>{
+      no = newValue;
+    }
+    return [no,noChange];
+  }
+  const [x,y] = fn(100);
+  x=100
+  fn = useState()   //react hook
+  all hooks are functions and used in functional component only.
+  Example of useState
+  <script src="../JS/react.development.js" ></script>
+  <script src="../JS/babel.min.js" ></script>
+  <script src="../JS/react-dom.development.js" ></script>
+
+  <div id="root"></div>
+
+  <script type="text/babel" >
+    //content
+    const App=()=>{
+      const ref1 = React.useRef();
+      const ref2 = React.useRef();
+      // const [result,setResult] = React.useState(0);
+      const [result,setResult] = React.useState();
+      const fnClick=()=>{
+        const num1 = parseInt(ref1.current.value);
+        const num2 = parseInt(ref2.current.value);
+        const sum = num1 + num2;
+        setResult(sum);
+      }
+      return <div>
+          <p>
+            Number 1 : <input ref={ref1} />  
+          </p>
+          <p>
+            Number 2 : <input ref={ref2} />  
+          </p>
+          <p>
+            <button onClick={fnClick}>Sum</button>
+          </p>
+          <p>
+            Result : {result}
+          </p>
+        </div>
+    };
+    //container reference
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App/>);
+  </script>
 Class 26
-
+  In react event handler method called by passing 1 argument of type object. eve 
+  eve.type
+  eve.target.value
+  "sachin".split("").reverse().join("")
 Class 27
+  <h1 style = {{color:'red'}}>
+  setClr(sum>100?"red":"green");
+  conditional Rendering
+  const A = ()=>{
+    return <div>A</div>
+  }
+  const App=(props)=>{
+    let isShow=false;
+    return <div>
+    <div>App</div>
+    {isShow && <A/>}
+    </div>
+  }
+  <App/>
+  Ex.2 {isShow?<A/>:<B/>}
+  !isShow=true;
+  <h1 className={result != 0 && (result>100?'cr':'cb')}
+  Example sum of two numbers useState
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
 
+  <div id="root"></div>
+
+  <script type="text/babel" >
+    //content
+    const App=()=>{
+      // debugger;
+      const [result,setResult] = React.useState(0);
+      const [data,setData] = React.useState({});
+      const [clr,setClr] = React.useState({color:''});
+      const fnClick=()=>{
+        const {n1,n2} = data;
+        const sum = parseInt(n1)+parseInt(n2);
+        setResult(sum);
+        setClr(sum>100?{color:'red'}:{color:'green'});
+      }
+      const fnChange=(eve)=>{
+        const {id,value} = eve.target;
+        setData({...data,[id]:value});
+      }
+      return <div>
+          <p>
+            Number 1 <input type='number' onChange={fnChange} id='n1' />  
+          </p>
+          <p>
+            Number 2 <input type='number' onChange={fnChange} id='n2' />  
+          </p>
+          <p>
+            <button onClick={fnClick} >Sum</button>  
+          </p>
+          <p>
+            Result : <span style={clr} > {result} </span>  
+          </p>
+        </div>
+    }
+    //container reference
+    var root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App/>)
+  </script>
 Class 28
+  <div className={`c1 ${addCRClass?"cr":"cb"}`} > </div>
+  var name = 'Sai'
+  var loc = 'Bhuban'
+  `My name is ${name} am from ${loc}`
+  const [styleObj,setstyleObj] = React.useState({});
+  setstyleObj(sum > 100?{color:'red',fontSize:'50px'}:{color:'green',fontSize:'10px'})
+Class 29  Communication between component
+  App - Parent
+    A - Child
+    B - Child
+  data inside App(Parent) component
+  1. pass the data to A component (Parent to Child)
+  data inside A(Child) component
+  2. pass the data to App component (Child to Parent)
+  3. pass the data to B component (Sibling to Sibling)
+  Parent to child --------->
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
 
-Class 29
+  <div id="root"></div>
 
+  <script type="text/babel">
+    const A = (props) => {
+      return (
+        <div>
+          <h1>A(child):{props.children}</h1>
+        </div>
+      );
+    };
+    const App = () => {
+      const ref = React.useRef();
+      const [value, setValue] = React.useState("");
+      const fnClick = () => {
+        setValue(ref.current.value);
+      };
+      return (
+        <div>
+          <p>
+            <b>App(Parent)</b>
+          </p>
+          <p>
+            Player Name : <input ref={ref} />
+          </p>
+          <p>
+            <button onClick={fnClick}>Parent to Child</button>
+          </p>
+          <A>{value}</A>
+        </div>
+      );
+    };
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+  child to Parent --------->
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
+
+  <div id="root"></div>
+
+  <script type="text/babel" >
+    //content
+    const A = (props)=>{
+      const [data,setData] = React.useState();
+      const fnClick=()=>{
+        props.myCB(data);
+      }
+      const fnChange=(eve)=>{
+        setData(eve.target.value);
+      }
+      return <div>
+        <h1>A</h1>
+        <p>
+          Player Name : <input onChange={fnChange} />
+        </p>
+        <p>
+        <button onClick={fnClick} >Send to parent</button>  
+        </p>
+      </div>
+    }
+    const App=()=>{
+      const [value,setValue] = React.useState();
+      const cb = (val)=>{
+        setValue(val);
+      }
+      return <div>
+        <h1>App: {value} </h1> 
+        <A myCB={cb} ></A> 
+      </div>
+    }
+    //container reference
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App/>);
+  </script>
+  string reverse ===> "saiprasadsahoo".split('').reverse().join('');
+  child to child --------->
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
+
+  <style>
+    .bdr{
+      border:1px solid red;
+      margin:10px;
+      padding:10px;
+    }
+  </style>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    //content
+    const B = (props)=>{
+      return <div className='bdr' >
+        <h3>B : {props.children} </h3>
+      </div>
+    }
+    const A=(props)=>{
+      const [dataA,setDataA] = React.useState();
+      const fnChange=(eve)=>{
+        setDataA(eve.target.value);
+      }
+      const fnClick=()=>{
+        props.myCB(dataA);
+        console.log("dataA : "+dataA);
+      }
+      return <div className='bdr' >
+        <h3>A</h3>
+        <p>
+        Player Name : <input onChange={fnChange} />
+        </p>
+        <p>
+          <button onClick={fnClick} >Send to sibling</button>
+        </p>
+      </div>
+    }
+    const App=()=>{
+      const [dataApp,setDataApp] = React.useState();
+      const cb = (val) => {
+        setDataApp(val);
+      }
+      return <div className='bdr' >
+        <h2>App : {dataApp} </h2>
+        <A myCB={cb} ></A>
+        <B>{dataApp}</B>
+      </div>
+    }
+    //container reference
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App/>);
+  </script>
 Class 30
+  App - has data
+    A
+    B C D E
+    F
+    G
+    H I
+  send data to E, G, I
+  context API:-
+  1. create a context //const ctx = React.createContext();
+  2. make the context available to react application //<ctx.Provider>Components</ctx.Provider>
+  3. provide the data to context  //<ctx.Provider value={data} >Components</ctx.Provider>
+  4. consume the data from context //const ctxData = React.useContext(ctx);
+  array, object , context inside context
+Class 31 useContext 
+  1. Can we pass the data from child to parent? No
+  2. Can we use multiple context? Yes
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
 
-Class 31
+  <style>
+    .bdr{
+      border:1px solid blue;
+      margin:10px;
+      padding:10px;
+    }
+  </style>
 
+  <div id="root"></div>
+
+  <script type = "text/babel">
+    //creating context
+    const ctx = React.createContext();
+    //containent
+    const I = () =>{
+      const ctxData = React.useContext(ctx);
+      return <div className="bdr">
+          <h2>I : {ctxData[1]}</h2>
+        </div>
+    }
+    const E = () =>{
+      const ctxData = React.useContext(ctx);
+      return <div className="bdr">
+          <h2>E : {ctxData[2]} </h2>
+        </div>
+    }
+    const D = (props) =>{
+      return <div className="bdr">
+          <h2>D</h2>
+          <E> {props.name} </E>
+        </div>
+    }
+    const C = (props) =>{
+      return <div className="bdr">
+          <h2>C</h2>
+          <D> {props.name} </D>
+        </div>
+    }
+    const H = () =>{
+      return <div className="bdr">
+          <h2>H</h2>
+          <I></I>
+        </div>
+    }
+    const G = () =>{
+      const ctxData = React.useContext(ctx);
+      return <div className="bdr">
+          <h2>G : {ctxData[0]} </h2>
+        </div>
+    }
+    const F = () =>{
+      return <div className="bdr">
+          <h2>F</h2>
+        </div>
+    }
+    const B = (props) =>{
+      return <div className="bdr">
+          <h2>B</h2>
+          <C> {props.name} </C>
+        </div>
+    }
+    const A = () =>{
+      return <div className="bdr">
+          <h2>A</h2>
+        </div>
+    }
+    const App = ()=>{
+      const data = ['Sachin','Dhoni','Kohli'];
+      return <div className = 'bdr' >
+        <h1>App</h1>
+        <ctx.Provider value={data}>
+        <A></A>
+        <B> {data} </B>
+        <F></F>
+        <G> {data} </G>
+        <H> {data} </H>
+        </ctx.Provider>
+      </div>
+    }
+    //container reference
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App/>);
+
+  </script>
+  Asynchronus action is known as line by line execution.
+  setTimeout(cb,time in milli seconds);
+  returns callback id of setTimeout
+  clearTimeout(timeoutid);
+  setinterval(cb,time in milli seconds);
+  returns callback id of setInterval
+  clearInterval(intervalid);
+
+    parent : relative
+    child : absolute
+
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
+  <style>
+    .bdr {
+      height: 300px;
+      width: 500px;
+      margin-bottom: 20px;
+      border: 2px solid red;
+      display: inline-block;
+      position: relative;
+    }
+    .target {
+      height: 200px;
+      border: 2px solid blueviolet;
+      display: inline-block;
+      position: absolute;
+      right: 10px;
+      top: 30px;
+    }
+    .arrow {
+      width: 80px;
+      border: 1px solid rgb(83, 252, 16);
+      position: absolute;
+      top: 130px;
+    }
+  </style>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    //content
+    const App = () => {
+      const [left, setLeft] = React.useState(0);
+      const fnClick = () => {
+        const IntervalId = setInterval(() => {
+          setLeft((val)=>{
+            if(val==405){
+              clearInterval(IntervalId);
+            }
+            return val+1;
+          })
+        }, 20);
+      };
+      return (
+        <div>
+          <div className="bdr">
+            <div className="target"></div>
+            <div className="arrow" style={{left:left}} ></div>
+          </div>
+          <br />
+          <button onClick={fnClick}>click</button>
+        </div>
+      );
+    };
+    //container reference
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
 Class 32
+  student_Marks=[800,900,648,939,383];
+  (5) [800, 900, 648, 939, 383]
+  student_Marks.map((ele)=>ele+5)
+  (5) [805, 905, 653, 944, 388]
+  array.map(ele,idx,originalarray);
+  Example: List and keys
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
+  <style>
+    .bdr {
+      margin: 10;
+      padding: 10;
+      border: 1px solid red;
+    }
+  </style>
+  <div id="root"></div>
 
-Class 33
+  <script type="text/babel">
+    //content
+    const App = () => {
+      const players = ["sachin", "dhoni", "kohli", "uv"];
+      return (
+        <div className="bdr">
+          <h1>Order List</h1>
+          <ol>
+            {players.map((ele, id, oa) => {
+              return <li key={`li${id}`}>{ele}</li>;
+            })}
+          </ol>
+          <h1>Dropdown</h1>
+          <select name="" id="">
+            {players.map((ele, idx, oa) => {
+              return <option key={`opt${idx}`}>{ele}</option>;
+            })}
+          </select>
+          <h1>Display in para</h1>
+          {players.map((ele, idx, oa) => {
+            return <p key={`p${idx}`}>{ele}</p>;
+          })}
+          <h1>With Radio buttons</h1>
+          {players.map((ele, idx, oa) => {
+            return (
+              <p key={`p${idx}`}>
+                <input type="radio" name="player" />
+                {ele}
+              </p>
+            );
+          })}
 
+          <h1>With table</h1>
+          {
+            <table border="1">
+              <thead>
+                <tr>
+                  <th>SL.No</th>
+                  <th>Player Name</th>
+                </tr>
+              </thead>
+              <tbody>
+                {players.map((ele, idx, oa) => {
+                  return (
+                    <tr key={`tr${idx}`}>
+                      <td>{idx + 1}</td>
+                      <td>{ele}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          }
+        </div>
+      );
+    };
+    //container reference
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+  Array Methods:
+  -If we want to represent multiple elements in a single variable, then we can go with an array.
+  -var a = [10,20,30,40];
+  -In an array, we can insert duplicate elements.
+  -Through, index we can retrive an element from array.
+  -Array index always starts with 0.
+  length : This property is used to get the length of an array.
+  var a = [10,20,30];
+  undefined
+  a.length
+  3 
+  1)push(): used insert an element(s) in the last index. Return type number(new length of array).
+  a.push('sai')
+  4
+  a
+  (4) [10, 20, 30, 'sai']
+  a.push('Bhuban',{rollno:417051})
+  6
+  a
+  (6) [10, 20, 30, 'sai', 'Bhuban', {…}] 
+  2)pop() used to remove an element from last index.
+  Return last element.
+  a.pop()
+  {rollno: 417051}
+  3)unshift(): is used to insert element(s) in the first index.
+  Return type number(new length of array).
+  a.unshift(1,2)
+  7
+  a
+  (7) [1, 2, 10, 20, 30, 'sai', 'Bhuban']
+  4)shift(): used to remove an element from first index.
+  return first element.
+  a.shift()
+  1
+  5)indexOf(): It gives an index of element in the array.
+  It takes two arguements.
+  1. element to be serched
+  2. from which indef u want to search
+  Using indexOf, we can check one element is there or not in the array. If there it return that element index, if not it returns -1.
+  return type: number
+  a = [10,20,30]
+  (3) [10, 20, 30]
+  a.indexOf(10);
+  0
+  a.indexOf(10,1);
+  -1
+  6)lastIndexOf(): It gives last matching element index, in the array.
+  It takes two arguements.
+  a
+  (5) [10, 20, 30, 10, 20]
+  a.lastIndexOf(10)
+  3
+  7)includes(): using includes() we can check one element is there or not in the array.if there it returns true, if not it returns false.
+  it takes two arguments.
+  first argument : element
+  second argument : at which index
+  return type : boolean
+  a = [10,20,30]
+  (3) [10, 20, 30]
+  a.includes(10)
+  true
+  a.includes(20,1)
+  true
+  a.includes(20,2)
+  false
+  8)join():used to convert array into strings with some delemeter.
+  default delimeter is ","
+  a
+  (3) [10, 20, 30]
+  a.join()
+  '10,20,30'
+  a.join("-")
+  '10-20-30'
+  9)reverse():used to print an array in reverse order
+  return type : array
+  a.reverse()
+  (3) [30, 20, 10]
+  10)concat():used to combine two arrays
+  It creates new result array.It's not effect the original array.
+  return type : array
+  a.concat(3,4,5)
+  (6) [30, 20, 10, 3, 4, 5]
+  a
+  (3) [30, 20, 10]
+  11)forEach(): used to retrieve data from array.
+  which takes two arguements:1. callback function 2. thisArg
+  The call back function called by passing three arguments value,index,original array.
+  a.forEach((val,idx,oa)=>{
+      console.log(val+" "+idx+" "+oa);
+  })
+  30 0 30,20,10
+  20 1 30,20,10
+  10 2 30,20,10
+  undefined
+  12)every(-):which is used to check array elements based on condition, which return boolean value.
+  If all elements in the array,satisfied your condtion then returns true.
+  If minimum one element in the array, is not satisfied your condtion then returns false.
+  a.every((val,idx)=>{
+      return val>11
+  })
+  false
+  a.every((val,idx)=>{
+      return val>5
+  })
+  true
+  13)some(-,-), which is used to check array elements based on condition, which return boolean value.
+  If minimum one element in the array, is satisfied your condtion then returns true.
+  If no element in the array, is not satisfied your condtion then returns false.
+  a.some((val,idx)=>{
+      console.log(val+" "+idx);
+      return val>11
+  })
+  30 0
+  true
+  14)filter(-,-), which is used to filter the elements in the array based on condition, which return array.
+  Which take 2 arguments, one callback function and thisArg.
+  The call back function called by passing three arguements, value ,index,original array.
+  a.filter((val,idx,oa)=>{
+      return val>11
+  })
+  (2) [30, 20]
+  15)find(-,-), which is used to find an element in the array, based on condition.
+  If condition satisfied, it returns an element.
+  If condition not satisfied,it returns undefined.
+  Which take 2 arguments, one callback function and thisArg.
+  The call back function called by passing three arguements, value ,index,original array.
+  a.find((val,idx,oa)=>{
+      return val==20;
+  })
+  20
+  a.find((val,idx,oa)=>{
+      return val==25;
+  })
+  undefined
+  16)findIndex(-), which is used to find an element index in the array, based on condition.
+  If condition satisfied, it returns an element index.
+  If condition not satisfied,it returns -1.
+  Which take 2 arguments, one callback function and thisArg.
+  The call back function called by passing three arguements, value ,index,original array.
+  a.findIndex((val,idx,oa)=>{
+      return val==20;
+  })
+  1
+  a.findIndex((val,idx,oa)=>{
+      return val==2;
+  })
+  -1
+  17)sort() with out arguments, which is used to sort an elements in the array based on dictionary sorting, suitable for alphabets.
+  sort(-) with arguments, which is used to sort an elements in the array by return number(+ve,-ve,0),suitable for numbers.
+  a=['sachin','kohli','dravid']
+  (3) ['sachin', 'kohli', 'dravid']
+  a.sort()
+  (3) ['dravid', 'kohli', 'sachin']
+  a = [4,1,7,0,5,1]
+  (6) [4, 1, 7, 0, 5, 1]
+  a.sort()
+  (6) [0, 1, 1, 4, 5, 7]
+  var array=[1,10,11,2,22,3,5]; array.sort()
+  Result:[1,10,11,2,22,3,5] //wrong out put
+  array.sort(function(value1,value2){
+  return value1-value2
+  })
+  Result:[1,2,3,5,10,11,22]
+  18)slice(-,-), which is used to get the part of an array
+  slice(-,-), take max 2 arguements, minimum 0. whose types are number.
+  First arguement represents your starting index, from there we can take n(difference of first and second arguement) elements.
+  var array=[1,10,11,2,22,3,5];
+  arrar.slice();
+  output:[1,10,11,2,22,3,5] //If no arguments, returns same array
+  var array=[1,10,11,2,22,3,5];
+  arrar.slice(3);
+  output:[2,22,3,5]//starting index is 3 and ending is array ending.
+  var array=[1,10,11,2,22,3,5];
+  array.slice(1,3)
+  Result:[10,11] // starting index is 1 from there it take 2 arguments
+  19)splice(-,-,-), which is used to modify an array(insert,delete,update).
+  splice(-,-,-), takes minimum 2 arguements, whose types are number.
+  First arguement represents, from where we have to start.
+  Second arguement represents, How many elements you want me to delete.
+  From third arguement onwards inserted elements
+  It modifies the original array.
+  var array=[1,10,11,2,22,3,5]; array.splice(1,1)
+  Result:console.log(array) -->[1,11,2,22,3,5]
+  var array=[1,10,11,2,22,3,5]; array.splice(1,3,100,200)
+  Result:console.log(array) -->[1,100,200,22,3,5]
+  var array=[1,10,11,2,22,3,5]; array.splice(1,0,100,200)
+  Result:console.log(array) -->[1,100,200,10,11,2,22,3,5]
+  20)map(-), if you want to perform same operation on each and every element in the array , then go with map.
+  var array=[1,2,3,4,5];
+  array.map(function(value,index){
+  return value+1
+  })
+  Result:[2,3,4,5,6]
+  21)reduce(-,-), if you want to convert multiple elements into a single variable.
+  var array=[1,2,3,4,5];
+  array.reduce(function(initVal,value){
+  initVal=initVal+value
+  return initVal
+  })
+  Result:15
+  string methods:-
+  var name="sachin";
+
+  1)length
+
+  length property is used to get the length of string.
+  Ex:
+
+  var name="sachin"
+  console.log(name.length);
+  Result: 6
+
+  2)indexOf(-)
+
+  indexOf(-,-) , it gives an starting index of charactor(s) in the string.
+  It take two arguements.
+  Using indexOf(), we can check charactor(s) is there or not in the string. If there it return that charactor(s) starting index, if not it returns -1.
+  Ex:
+
+  var name="sachin";
+  name.indexOf('ch')
+  Result: 2
+  name.indexOf('z')
+  Result: -1
+
+  Note: If you observe above one, if the charactor(s) is there it return that starting index of the charactor(s), if not there, it always returns -1.
+
+  Return type: number.
+
+  3)lastIndexOf(-,-)
+
+  lastIndexOf(-,-) , it gives last matching charactor(s) index, in the string.
+  It take two arguements.
+  Ex:
+
+  var name="sachin tendulkar";
+  name.lastIndexOf('a')
+  Result: 14
+
+  Return type: number.
+
+  4)includes(-,-)
+
+  Using includes(), we can check charactor(s) is there or not in the string. If there it return true, if not it returns false.
+  It take two arguements.
+  Ex:
+
+  var name="sachin";
+  name.includes('ch')
+  Result: true
+  name.includes('z')
+  Result: false
+
+  Note: If you observe above one, if the charactor(s) there it returns true, if not it returns false.
+
+  Return type: boolean.
+
+  chartAt(-)
+
+  chartAt(-) ,which gives the charactor at that positions.
+  Ex:
+
+  var name="sachin";
+  name.charAt(2); Result: c
+
+  5)charCodeAt(-)
+
+  charCodeAt(-) ,which gives the ASCII value of charactor at that positions.
+  Ex:
+
+  var name="sachin";
+  name.charCodeAt(2); Result:115
+
+  6)startsWith(-)
+
+  startsWith(-) ,which is used to check that string is starts with given charactor(s).
+  It returns boolean value
+  It check for case sensitive.
+  Ex:
+
+  var name="sachin";
+  name.startsWith('sa'); Result:true
+  var name="sachin";
+  name.startsWith('Sa'); Result:false
+
+  7)endsWith(-)
+
+  endsWith(-) ,which is used to check that string is ends with given charactor(s).
+  It returns boolean value
+  It check for case sensitive.
+  Ex:
+
+  var name="sachin";
+  name.endsWith('in'); Result:true
+  var name="sachin";
+  name.endsWith('In'); Result:false
+
+  8)concat(--)
+
+  concat(--), which is used to combine two strings.
+  Ex:
+
+  var name1="sachin"; var name2="dhoni"; var result=name1.concat(name2); console.log(result); Result: sachindhoni
+
+  9)slice(-,-)
+
+  slice(-,-), which is used to get the part of a string
+  slice(-,-), take 2 arguements, whose types are number.
+  First arguement represents your starting index, from there we can take n(difference of first and second arguement) charactor(s).
+  In slice method, first arguement always less than second arguement.
+  Ex:
+
+  var name='sachin'
+  name.slice(1,3)
+  Result:"ac"
+  name.slice(3,1)
+  Result:""
+
+  10)substring(-,-)
+
+  substring(-,-), which is used to get the part of a string
+  substring(-,-), take 2 arguements, whose types are number.
+  First arguement represents your starting index, from there we can take n(difference of first and second arguement) charactor(s).
+  Ex:
+
+  var name='sachin'
+  name.substring(1,3)
+  Result:"ac"
+  name.substring(3,1)
+  Result:"ac"
+
+  substr(-,-)
+
+  substr(-,-), which is used to get the part of a string
+  substr(-,-), take 2 arguements, whose types are number.
+  First arguement represents your starting index, from there we can take n(second arguement) charactor(s).
+  Ex:
+
+  var name='sachin'
+  name.substr(1,3)
+  Result:"ach"
+
+  12)toUpperCase()
+
+  toUpperCase(), which is used to convert your string into uppercase letters.
+  Ex:
+
+  var name='sachin'
+  name.toUpperCase()
+  Result:"SACHIN"
+
+  13)toLowerCase()
+
+  toUpperCase(), which is used to convert your string into lowercase letters.
+  Ex:
+
+  var name='SACHIN'
+  name.toLowerCase()
+  Result:"sachin"
+Class 33  Reusable code
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
+
+  <div id="root"></div>
+
+  <script type="text/babel">
+    //content
+    const List = (props)=>{
+          return <div>
+            <h1>{props.headings}</h1>
+            <ol>
+            {props.data.map((ele, idx, oa) => {
+              return <li key={"li" + idx}>{ele}</li>;
+            })}
+          </ol>
+          </div>
+    }
+    const App = () => {
+      const players = ["sachin", "dhoni", "kohli"];
+      const students = ["s1", "s2", "s3", "s4", "s5"];
+      const listArr=[
+        {
+          headings:'Players',
+          data:["sachin", "dhoni", "kohli"]
+        },
+        {
+          headings:'Students',
+          data:["s1", "s2", "s3", "s4", "s5"]
+        }
+      ]
+      return ( <div>
+        {
+          listArr.map((ele,idx)=>{
+            return <List key={`li${idx}`} {...ele}/>
+          })
+        }</div>
+      );
+    };
+    //container reference
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+  Assignment-1: Table Reusable Components
+  Students
+  Name student_Marks    Players
+  s1    90              Name    Runs    Location
+  s2    88              Sachin  20000   Mumbai
+  s3    85              Dhoni   10000   Ranchi
+  s4    95
+  s5    91
 Class 34
+  <script src="../JS/react.development.js"></script>
+  <script src="../JS/babel.min.js"></script>
+  <script src="../JS/react-dom.development.js"></script>
 
+  <div id="root"></div>
+
+  <script type="text/babel">
+    //content
+    const Table = (props) => {
+      const { heading, headers, data, columns } = props;
+      return (
+        <div>
+          <h1>{heading}</h1>
+          <table border="1">
+            <thead>
+              <tr>
+                {headers.map((ele, idx) => {
+                  return <th key={"li" + idx}>{ele}</th>;
+                })}
+              </tr>
+            </thead>
+            <tbody>
+              {data.map((obj, idx) => {
+                return (
+                  <tr key={"tr" + idx}>
+                    {columns.map((ele, idx1) => {
+                      return <td key={"k" + idx1}>{obj[ele]}</td>;
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      );
+    };
+    const App = () => {
+      const students = [
+        { name: "s1", marks: 88 },
+        { name: "s2", marks: 98 },
+        { name: "s3", marks: 78 },
+        { name: "s4", marks: 95 },
+        { name: "s5", marks: 91 },
+      ];
+      const players = [
+        { name: "Sachin", runs: 20000, loc: "Mumbai" },
+        { name: "Dhoni", runs: 10000, loc: "Ranchi" },
+      ];
+      return (
+        <div>
+          <Table
+            columns={["name", "marks"]}
+            headers={Object.keys(students[0])}
+            heading={"Students"}
+            data={students}
+          />
+          <Table
+            columns={["name", "runs", "loc"]}
+            headers={Object.keys(players[0])}
+            heading={"Players"}
+            data={players}
+          />
+        </div>
+      );
+    };
+    //container reference
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<App />);
+  </script>
+  Life Cycle Phases:- Any component only have 3 components
+  mounting- component loading
+  updating- changes in component
+  unmounting- component unload
 Class 35
 
 Class 36
